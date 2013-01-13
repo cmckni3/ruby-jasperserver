@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: <URL>rest/login
+    body:
+      encoding: US-ASCII
+      string: j_username=<USERNAME>&j_password=<USERNAME>
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - <SERVER>
+      P3p:
+      - CP="ALL"
+      Set-Cookie:
+      - <SET-COOKIE>
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '0'
+      Date:
+      - Sun, 13 Jan 2013 22:59:08 GMT
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sun, 13 Jan 2013 22:59:49 GMT
+- request:
+    method: get
+    uri: <URL>rest_v2/reports/reports/test_report.pdf?Value1=Value1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Cookie:
+      - <COOKIE>
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        PFNFUlZFUj4=
+      !binary "UHJhZ21h":
+      - !binary |-
+        Tm8tY2FjaGU=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        V2VkLCAzMSBEZWMgMTk2OSAxODowMDowMCBDU1Q=
+      !binary "UDNw":
+      - !binary |-
+        Q1A9IkFMTCI=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vcGRm
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        OTA2
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMyBKYW4gMjAxMyAyMjo1OTowOCBHTVQ=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9MZW5ndGggMjkvRmlsdGVyL0Zs
+        YXRlRGVjb2RlPj5zdHJlYW0KeJwr5HIK4TI2UzA3NVMISeFyDeEK5OICADFi
+        BDEKZW5kc3RyZWFtCmVuZG9iagozIDAgb2JqCjw8L0dyb3VwPDwvVHlwZS9H
+        cm91cC9DUy9EZXZpY2VSR0IvUy9UcmFuc3BhcmVuY3k+Pi9QYXJlbnQgMiAw
+        IFIvQ29udGVudHMgMSAwIFIvVHlwZS9QYWdlL1Jlc291cmNlczw8L1Byb2NT
+        ZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldL0NvbG9y
+        U3BhY2U8PC9DUy9EZXZpY2VSR0I+Pj4+L01lZGlhQm94WzAgMCA2MTIgNzky
+        XT4+CmVuZG9iagoyIDAgb2JqCjw8L0lUWFQoMi4xLjcpL1R5cGUvUGFnZXMv
+        Q291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iago0IDAgb2JqCjw8L1R5cGUv
+        Q2F0YWxvZy9WaWV3ZXJQcmVmZXJlbmNlczw8L1ByaW50U2NhbGluZy9BcHBE
+        ZWZhdWx0Pj4vUGFnZXMgMiAwIFI+PgplbmRvYmoKNSAwIG9iago8PC9DcmVh
+        dG9yKEphc3BlclJlcG9ydHMgXCh0ZXN0X3JlcG9ydFwpKS9Qcm9kdWNlcihp
+        VGV4dCAyLjEuNyBieSAxVDNYVCkvTW9kRGF0ZShEOjIwMTMwMTEzMTY1OTA4
+        LTA2JzAwJykvQ3JlYXRpb25EYXRlKEQ6MjAxMzAxMTMxNjU5MDgtMDYnMDAn
+        KT4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAw
+        MDAwMTUgMDAwMDAgbiAKMDAwMDAwMDMyNiAwMDAwMCBuIAowMDAwMDAwMTEw
+        IDAwMDAwIG4gCjAwMDAwMDAzODkgMDAwMDAgbiAKMDAwMDAwMDQ4MCAwMDAw
+        MCBuIAp0cmFpbGVyCjw8L1Jvb3QgNCAwIFIvSUQgWzxkZTU4ZGUwMDFiMGYy
+        ZmFmOWJlYWU5NTJkNDY1MmNmZj48NGFmNjMyYTRmMWE4MGY5MTBkNmQxZWQw
+        MzBkZGJhYTI+XS9JbmZvIDUgMCBSL1NpemUgNj4+CnN0YXJ0eHJlZgo2NDEK
+        JSVFT0YK
+    http_version: 
+  recorded_at: Sun, 13 Jan 2013 22:59:50 GMT
+recorded_with: VCR 2.4.0
