@@ -7,3 +7,7 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'thin'
+end
