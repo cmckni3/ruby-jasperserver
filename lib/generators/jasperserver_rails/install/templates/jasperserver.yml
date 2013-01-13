@@ -1,0 +1,4 @@
+jasperserver:
+  url: 'http://server:port/jasperserver/'
+  username: 'username'
+  password: 'password'

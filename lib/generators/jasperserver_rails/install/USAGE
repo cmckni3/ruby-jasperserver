@@ -1,0 +1,9 @@
+Description:
+    Installs the jasperserver initializer and copies over a sample yml file
+
+Example:
+    rails generate jasperserver_rails:install
+
+    This will create:
+        config/jasperserver.yml
+        config/initializers/jasperserver.rb

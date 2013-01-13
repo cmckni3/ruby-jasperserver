@@ -2,6 +2,16 @@
 
 Download reports in various formats from jasperserver
 
+Formats supported:
+
+  * HTML
+  * PDF
+  * XLS
+  * RTF
+  * CSV
+  * XML
+  * jrprint
+
 ## Installation
 
 Add this line to your application's Gemfile:
