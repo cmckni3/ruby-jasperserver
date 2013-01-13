@@ -10,4 +10,6 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'thin'
+  gem 'vcr'
+  gem 'webmock'
 end
