@@ -2,6 +2,16 @@
 
 Download reports in various formats from jasperserver
 
+Formats supported:
+
+  * HTML
+  * PDF
+  * XLS
+  * RTF
+  * CSV
+  * XML
+  * jrprint
+
 == Installation
 
 Add this line to your application's Gemfile:
@@ -18,13 +28,26 @@ Or install it yourself as:
 
 == Usage
 
-TODO: Write usage instructions here
+1. Add jasperserver configuration to config/jasperserver.yml
 
-== License 
+2. Run a report using the DSL
+
+
+  JasperserverRails::Jasperserver.new.run_report 'test.pdf' do
+    format 'pdf'
+    report 'test_report'
+    params({ :Value1 => 'Value1' })
+  end
+
+== TODO
+
+1. Documentation
+2. Background processing
+3. Add more tests
 
 == Copyright and License
 
-JasperserverRails &copy; 2013 by [Chris McKnight](http://github.com/cmckni3).
+JasperserverRails &copy; 2013 by {Chris McKnight}[http://github.com/cmckni3].
 
 JasperserverRails is licensed under the MIT license. Please see the MIT-LICENSE document for more information.
 
