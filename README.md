@@ -28,9 +28,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Add jasperserver configuration to config/jasperserver.yml
 
-## License 
+2. Run a report using the DSL
+
+````ruby
+JasperserverRails::Jasperserver.new.run_report 'test.pdf' do
+  format 'pdf'
+  report 'test_report'
+  params({ :Value1 => 'Value1' })
+end
+````
+
+## TODO
+
+1. Documentation
+2. Background processing
+3. Add more tests
 
 ## Copyright and License
 
