@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/jasperserver-rails.png)](http://badge.fury.io/rb/jasperserver-rails)
+
 # JasperserverRails
 
 Download reports in various formats from jasperserver
