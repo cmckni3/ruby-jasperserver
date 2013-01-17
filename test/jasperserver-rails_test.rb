@@ -6,9 +6,9 @@ VCR.configure do |c|
   c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   c.hook_into :webmock
   c.default_cassette_options = { :record => :new_episodes, :erb => true }
-  c.filter_sensitive_data('<USERNAME>') { Rails.configuration.jasperserver[:jasperserver][:username] }
-  c.filter_sensitive_data('<PASSWORD>') { Rails.configuration.jasperserver[:jasperserver][:password] }
-  c.filter_sensitive_data('<URL>') { Rails.configuration.jasperserver[:jasperserver][:url] }
+  c.filter_sensitive_data('<USERNAME>') { Rails.configuration.jasperserver[Rails.env.to_sym][:username] }
+  c.filter_sensitive_data('<PASSWORD>') { Rails.configuration.jasperserver[Rails.env.to_sym][:password] }
+  c.filter_sensitive_data('<URL>') { Rails.configuration.jasperserver[Rails.env.to_sym][:url] }
   c.filter_sensitive_data('<SET-COOKIE>') do |interaction|
     interaction.response.headers["Set-Cookie"].first if !interaction.response.headers["Set-Cookie"].nil?
   end

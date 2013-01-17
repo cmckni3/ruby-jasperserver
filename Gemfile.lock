@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jasperserver-rails (0.0.1)
+    jasperserver-rails (0.0.2)
       rails (~> 3.2.11)
       rest-client
 
