@@ -26,7 +26,7 @@ module JasperserverRails
       login
       # Run report
       response2 = RestClient.get(
-        [Rails.configuration.jasperserver[:jasperserver][:url], 'rest_v2/reports/reports/', "#{self.get_report}.#{self.get_format}?#{self.get_params}"].join(''),
+        [Rails.configuration.jasperserver[Rails.env.to_sym][:url], 'rest_v2/reports/reports/', "#{self.get_report}.#{self.get_format}?#{self.get_params}"].join(''),
         {:cookies => @cookie }
       )
 
@@ -43,10 +43,10 @@ module JasperserverRails
       # login
       if @cookie.nil?
         response = RestClient.post(
-        [Rails.configuration.jasperserver[:jasperserver][:url], 'rest/login'].join(''),
+        [Rails.configuration.jasperserver[Rails.env.to_sym][:url], 'rest/login'].join(''),
           {
-            j_username: Rails.configuration.jasperserver[:jasperserver][:username],
-            j_password: Rails.configuration.jasperserver[:jasperserver][:password]
+            j_username: Rails.configuration.jasperserver[Rails.env.to_sym][:username],
+            j_password: Rails.configuration.jasperserver[Rails.env.to_sym][:password]
           }
         )
         @cookie = response.cookies

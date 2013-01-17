@@ -30,6 +30,23 @@ Or install it yourself as:
 
 1. Add jasperserver configuration to config/jasperserver.yml
 
+````
+development:
+  url: 'http://server:port/jasperserver/'
+  username: 'username'
+  password: 'password'
+
+test:
+  url: 'http://server:port/jasperserver/'
+  username: 'username'
+  password: 'password'
+
+production:
+  url: 'http://server:port/jasperserver/'
+  username: 'username'
+  password: 'password'
+````
+
 2. Run a report using the DSL
 
 ````ruby
