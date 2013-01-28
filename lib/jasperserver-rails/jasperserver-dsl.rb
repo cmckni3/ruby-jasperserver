@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'uri'
 require 'rest-client'
 module JasperserverRails
   class Jasperserver
@@ -6,7 +7,7 @@ module JasperserverRails
     self.class_eval do
       [:report, :format, :params].each do |method|
         define_method method do |arg|
-          arg = arg.collect { |key, value| [key, value].join('=') }.join('&') if method == :params
+          arg = arg.collect { |key, value| [key, value] } if method == :params
           instance_variable_set "@#{method}".to_sym, arg
         end
 
@@ -26,7 +27,7 @@ module JasperserverRails
       login
       # Run report
       response2 = RestClient.get(
-        [Rails.configuration.jasperserver[Rails.env.to_sym][:url], 'rest_v2/reports/reports/', "#{self.get_report}.#{self.get_format}?#{self.get_params}"].join(''),
+        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url]+'/', "rest_v2/reports/reports/#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}").to_s,
         {:cookies => @cookie }
       )
 
@@ -43,7 +44,7 @@ module JasperserverRails
       # login
       if @cookie.nil?
         response = RestClient.post(
-        [Rails.configuration.jasperserver[Rails.env.to_sym][:url], 'rest/login'].join(''),
+        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url]+'/', 'rest/login').to_s,
           {
             j_username: Rails.configuration.jasperserver[Rails.env.to_sym][:username],
             j_password: Rails.configuration.jasperserver[Rails.env.to_sym][:password]
