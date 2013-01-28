@@ -25,7 +25,7 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     VCR.use_cassette('test1') do
       JasperserverRails::Jasperserver.new do
         format 'pdf'
-        report 'test_report'
+        report 'samples/Department'
         params({ :Value1 => 'Value1', :Value2 => 'Value2' })
         run_report('test/dummy/tmp/reports/test.pdf')
       end
@@ -37,7 +37,7 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     VCR.use_cassette('test2') do
       JasperserverRails::Jasperserver.new do
         format 'pdf'
-        report 'test_report'
+        report 'samples/Department'
         params({ :Value1 => 'Value1' })
         run_report('test/dummy/tmp/reports/test2.pdf')
       end
@@ -49,7 +49,7 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     VCR.use_cassette('test3') do
       JasperserverRails::Jasperserver.new.run_report 'test/dummy/tmp/reports/test3.pdf' do
         format 'pdf'
-        report 'test_report'
+        report 'samples/Department'
         params({ :Value1 => 'Value1' })
       end
     end
@@ -60,7 +60,7 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     VCR.use_cassette('test4') do
       JasperserverRails::Jasperserver.new.run_report 'test/dummy/tmp/reports/test4.pdf' do
         format 'pdf'
-        report 'test_report'
+        report 'samples/Department'
         params({ :Value1 => 'Value1' })
       end
     end
@@ -69,7 +69,7 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     VCR.use_cassette('test5') do
       JasperserverRails::Jasperserver.new.run_report 'test/dummy/tmp/reports/test5.pdf' do
         format 'pdf'
-        report 'test_report'
+        report 'samples/Department'
         params({ :Value1 => 'Value1' })
       end
     end

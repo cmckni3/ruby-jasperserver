@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: <URL>rest/login
+    uri: <URL>/rest/login
     body:
       encoding: US-ASCII
-      string: j_username=<USERNAME>&j_password=<USERNAME>
+      string: j_username=<USERNAME>&j_password=<PASSWORD>
     headers:
       Accept:
       - ! '*/*; q=0.5, application/xml'
@@ -33,15 +33,15 @@ http_interactions:
       Content-Length:
       - '0'
       Date:
-      - Sun, 13 Jan 2013 22:59:08 GMT
+      - Mon, 28 Jan 2013 22:38:30 GMT
     body:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Sun, 13 Jan 2013 22:59:50 GMT
+  recorded_at: Mon, 28 Jan 2013 22:38:49 GMT
 - request:
     method: get
-    uri: <URL>rest_v2/reports/reports/test_report.pdf?Value1=Value1
+    uri: <URL>/rest_v2/reports/reports/samples/Department.pdf?Value1=Value1
     body:
       encoding: US-ASCII
       string: ''
@@ -80,34 +80,34 @@ http_interactions:
         YXBwbGljYXRpb24vcGRm
       !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        OTA2
+        OTA1
       !binary "RGF0ZQ==":
       - !binary |-
-        U3VuLCAxMyBKYW4gMjAxMyAyMjo1OTowOCBHTVQ=
+        TW9uLCAyOCBKYW4gMjAxMyAyMjozODozMCBHTVQ=
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9MZW5ndGggMjkvRmlsdGVyL0Zs
-        YXRlRGVjb2RlPj5zdHJlYW0KeJwr5HIK4TI2UzA3NVMISeFyDeEK5OICADFi
-        BDEKZW5kc3RyZWFtCmVuZG9iagozIDAgb2JqCjw8L0dyb3VwPDwvVHlwZS9H
+        YXRlRGVjb2RlPj5zdHJlYW0KeJwr5HIK4TI2U7AwMFMISeFyDeEK5OICADEz
+        BC0KZW5kc3RyZWFtCmVuZG9iagozIDAgb2JqCjw8L0dyb3VwPDwvVHlwZS9H
         cm91cC9DUy9EZXZpY2VSR0IvUy9UcmFuc3BhcmVuY3k+Pi9QYXJlbnQgMiAw
         IFIvQ29udGVudHMgMSAwIFIvVHlwZS9QYWdlL1Jlc291cmNlczw8L1Byb2NT
         ZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldL0NvbG9y
-        U3BhY2U8PC9DUy9EZXZpY2VSR0I+Pj4+L01lZGlhQm94WzAgMCA2MTIgNzky
+        U3BhY2U8PC9DUy9EZXZpY2VSR0I+Pj4+L01lZGlhQm94WzAgMCA1OTUgODQy
         XT4+CmVuZG9iagoyIDAgb2JqCjw8L0lUWFQoMi4xLjcpL1R5cGUvUGFnZXMv
         Q291bnQgMS9LaWRzWzMgMCBSXT4+CmVuZG9iago0IDAgb2JqCjw8L1R5cGUv
         Q2F0YWxvZy9WaWV3ZXJQcmVmZXJlbmNlczw8L1ByaW50U2NhbGluZy9BcHBE
         ZWZhdWx0Pj4vUGFnZXMgMiAwIFI+PgplbmRvYmoKNSAwIG9iago8PC9DcmVh
-        dG9yKEphc3BlclJlcG9ydHMgXCh0ZXN0X3JlcG9ydFwpKS9Qcm9kdWNlcihp
-        VGV4dCAyLjEuNyBieSAxVDNYVCkvTW9kRGF0ZShEOjIwMTMwMTEzMTY1OTA5
-        LTA2JzAwJykvQ3JlYXRpb25EYXRlKEQ6MjAxMzAxMTMxNjU5MDktMDYnMDAn
-        KT4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAw
-        MDAwMTUgMDAwMDAgbiAKMDAwMDAwMDMyNiAwMDAwMCBuIAowMDAwMDAwMTEw
-        IDAwMDAwIG4gCjAwMDAwMDAzODkgMDAwMDAgbiAKMDAwMDAwMDQ4MCAwMDAw
-        MCBuIAp0cmFpbGVyCjw8L1Jvb3QgNCAwIFIvSUQgWzwxZDg2MDA0OTlhZTRm
-        MzE5ZTE3NzVhMDAzYTVmODYwYj48MjI1Y2FhZjdmNTE1ODRmN2Y0NTdhYWFm
-        OWJlZDY5ZDg+XS9JbmZvIDUgMCBSL1NpemUgNj4+CnN0YXJ0eHJlZgo2NDEK
-        JSVFT0YK
+        dG9yKEphc3BlclJlcG9ydHMgXChEZXBhcnRtZW50XCkpL1Byb2R1Y2VyKGlU
+        ZXh0IDIuMS43IGJ5IDFUM1hUKS9Nb2REYXRlKEQ6MjAxMzAxMjgxNjM4MzAt
+        MDYnMDAnKS9DcmVhdGlvbkRhdGUoRDoyMDEzMDEyODE2MzgzMC0wNicwMCcp
+        Pj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAw
+        MDAxNSAwMDAwMCBuIAowMDAwMDAwMzI2IDAwMDAwIG4gCjAwMDAwMDAxMTAg
+        MDAwMDAgbiAKMDAwMDAwMDM4OSAwMDAwMCBuIAowMDAwMDAwNDgwIDAwMDAw
+        IG4gCnRyYWlsZXIKPDwvUm9vdCA0IDAgUi9JRCBbPDlhNGIzNGEwNzI4MTYx
+        MDJhOTUyZmFmY2E5YzAzZGY5PjxhODc3NTFhYjJhOWY5ZjU3MDNhMjE3NjUw
+        NDUyYWY2Mz5dL0luZm8gNSAwIFIvU2l6ZSA2Pj4Kc3RhcnR4cmVmCjY0MAol
+        JUVPRgo=
     http_version: 
-  recorded_at: Sun, 13 Jan 2013 22:59:51 GMT
+  recorded_at: Mon, 28 Jan 2013 22:38:50 GMT
 recorded_with: VCR 2.4.0
