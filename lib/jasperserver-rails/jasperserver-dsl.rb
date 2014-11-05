@@ -37,7 +37,7 @@ module JasperserverRails
       f.write(response2.body)
       f.close
     end
-    
+
     private
 
     def login
