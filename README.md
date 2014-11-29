@@ -1,6 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/jasperserver-rails.png)](http://badge.fury.io/rb/jasperserver-rails)
-
-# JasperserverRails
+# JasperserverRails [![Gem Version](https://badge.fury.io/rb/jasperserver-rails.png)](http://badge.fury.io/rb/jasperserver-rails) [![Build Status](https://secure.travis-ci.org/cmckni3/jasperserver-rails.png)](http://travis-ci.org/cmckni3/jasperserver-rails) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/cmckni3/jasperserver-rails)
 
 Download reports in various formats from jasperserver
 
