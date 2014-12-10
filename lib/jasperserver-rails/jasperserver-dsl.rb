@@ -28,7 +28,7 @@ module JasperserverRails
       # Run report
       response2 = RestClient.get(
         URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url]+'/', "rest_v2/reports/reports/#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}").to_s,
-        {:cookies => @cookie }
+        { :cookies => @cookie }
       )
 
       # Write file
@@ -42,9 +42,9 @@ module JasperserverRails
 
     def login
       # login
-      if @cookie.nil?
+      unless @cookie
         response = RestClient.post(
-        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url]+'/', 'rest/login').to_s,
+        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url] + '/', 'rest/login').to_s,
           {
             j_username: Rails.configuration.jasperserver[Rails.env.to_sym][:username],
             j_password: Rails.configuration.jasperserver[Rails.env.to_sym][:password]
