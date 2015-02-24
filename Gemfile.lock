@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jasperserver-rails (0.1.2)
+    jasperserver-rails (0.2.0)
       rails (>= 3.2.0)
       rest-client
 
@@ -54,6 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.5.0)
+    netrc (0.10.2)
     polyglot (0.3.5)
     rack (1.4.4)
     rack-cache (1.2)
@@ -80,8 +81,9 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rest-client (1.7.3)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
