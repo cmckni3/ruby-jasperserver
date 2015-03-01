@@ -14,6 +14,8 @@ Formats supported:
 
 ## Installation
 
+### Install the gem
+
 Add this line to your application's Gemfile:
 
     gem 'jasperserver-rails'
@@ -25,6 +27,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jasperserver-rails
+
+### Install the generator
+
+* Install the initializer and config file
+
+    $ rails g jasperserver_rails:install
+
+* Edit `config/jasperserver.yml`
 
 ## Usage
 
