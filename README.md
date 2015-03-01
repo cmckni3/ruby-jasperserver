@@ -32,7 +32,9 @@ Or install it yourself as:
 
 * Install the initializer and config file
 
-    $ rails g jasperserver_rails:install
+```
+$ rails g jasperserver_rails:install
+```
 
 * Edit `config/jasperserver.yml`
 
