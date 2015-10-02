@@ -6,7 +6,6 @@ VCR.configure do |c|
   jasper_config = Rails.configuration.jasperserver[Rails.env.to_sym]
   c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   c.hook_into :webmock
-  c.debug_logger = File.open('test/dummy/log/vcr.log', 'w')
   c.default_cassette_options = { record: :none, erb: true }
   c.filter_sensitive_data('<USERNAME>') { jasper_config[:username] }
   c.filter_sensitive_data('<PASSWORD>') { jasper_config[:password] }
