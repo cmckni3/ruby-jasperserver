@@ -3,8 +3,7 @@ require 'uri'
 require 'rest-client'
 module JasperserverRails
   class Jasperserver
-
-    self.class_eval do
+    class_eval do
       [:report, :format, :params].each do |method|
         define_method method do |arg|
           arg = arg.collect { |key, value| [key, value] } if method == :params
@@ -22,39 +21,50 @@ module JasperserverRails
       login
     end
 
-    def run_report(filename, save_file = false, &block)
+    def run_report(filename, &block)
       instance_eval(&block) if block_given?
       login
       # Run report
-      response2 = RestClient.get(
-        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url] + '/', "rest_v2/reports/reports/#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}").to_s,
+      report_path = [
+        'rest_v2',
+        'reports',
+        "#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}"
+      ].join '/'
+      report_data = RestClient.get(
+        URI.join(
+          config[:url],
+          report_path
+        ).to_s,
         { cookies: @cookie }
       )
 
-      if save_file
-        # Write file
-        FileUtils.mkdir_p(File.expand_path(filename).split('/')[0..-2].join('/'))
-        f = File.new(filename, 'wb')
-        f.write(response2.body)
-        f.close
-      else
-        response2.body
-      end
+      # Write file
+      FileUtils.mkdir_p(File.expand_path(filename).split('/')[0..-2].join('/'))
+      f = File.new(filename, 'wb')
+      f.write(report_data.body)
+      f.close
     end
 
     private
 
+    def config
+      Rails.configuration.jasperserver[Rails.env.to_sym]
+    end
+
     def login
       # login
       unless @cookie
-        response = RestClient.post(
-        URI.join(Rails.configuration.jasperserver[Rails.env.to_sym][:url] + '/', 'rest/login').to_s,
+        @cookie = RestClient.post(
+          [
+            config[:url],
+            'rest',
+            'login'
+          ].join('/').to_s,
           {
-            j_username: Rails.configuration.jasperserver[Rails.env.to_sym][:username],
-            j_password: Rails.configuration.jasperserver[Rails.env.to_sym][:password]
+            j_username: config[:username],
+            j_password: config[:password]
           }
-        )
-        @cookie = response.cookies
+        ).cookies
       end
     end
   end
