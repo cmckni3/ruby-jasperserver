@@ -66,6 +66,18 @@ class JasperserverRailsTest < ActiveSupport::TestCase
     File.exist? report_file
   end
 
+  test 'report data is returned when simply generating the report' do
+    report_file = 'test/dummy/tmp/reports/test3.pdf'
+    VCR.use_cassette 'test3' do
+      report = JasperserverRails::Jasperserver.new.generate_report do
+        format 'pdf'
+        report 'reports/samples/Department'
+        params({ Value1: 'Value1' })
+      end
+      assert report
+    end
+  end
+
   test 'stays logged in when running multiple reports' do
     report_file = 'test/dummy/tmp/reports/test4.pdf'
     VCR.use_cassette 'test4' do
