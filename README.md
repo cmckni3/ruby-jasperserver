@@ -1,7 +1,9 @@
 # JasperserverRails
-[![Gem Version](https://badge.fury.io/rb/jasperserver-rails.png)](http://badge.fury.io/rb/jasperserver-rails)
-[![Build Status](https://travis-ci.org/cmckni3/rails-jasperserver.svg?branch=master)](https://travis-ci.org/cmckni3/rails-jasperserver)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/cmckni3/jasperserver-rails)
+[![Gem Version](https://img.shields.io/gem/v/jasperserver-rails.svg)](https://rubygems.org/gems/jasperserver-rails)
+[![Travis](https://img.shields.io/travis/cmckni3/rails-jasperserver.svg)](https://travis-ci.org/cmckni3/rails-jasperserver)
+[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://codeclimate.com/github/cmckni3/jasperserver-rails)
+[![License](https://img.shields.io/github/license/cmckni3/rails-jasperserver.svg)]()
+[![Dependency Status](https://img.shields.io/versioneye/d/ruby/jasperserver-rails.svg)](https://www.versioneye.com/user/projects/57028f6bfcd19a004543f84b)
 
 Download reports in various formats from jasperserver
 
