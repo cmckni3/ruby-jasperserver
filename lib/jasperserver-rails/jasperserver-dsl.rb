@@ -21,7 +21,7 @@ module JasperserverRails
       login
     end
 
-    def run_report(filename, &block)
+    def generate_report(&block)
       instance_eval(&block) if block_given?
       login
       # Run report
@@ -37,11 +37,12 @@ module JasperserverRails
         ).to_s,
         { cookies: @cookie }
       )
+    end
 
-      # Write file
+    def run_report(filename, &block)
       FileUtils.mkdir_p(File.expand_path(filename).split('/')[0..-2].join('/'))
       f = File.new(filename, 'wb')
-      f.write(report_data.body)
+      f.write(generate_report(&block).body)
       f.close
     end
 
