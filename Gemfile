@@ -19,5 +19,5 @@ end
 group :test do
   gem 'sqlite3'
   gem 'vcr', '~> 2.9'
-  gem 'webmock'
+  gem 'webmock', '~> 1.24'
 end
