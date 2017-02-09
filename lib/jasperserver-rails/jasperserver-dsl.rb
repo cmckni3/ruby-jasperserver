@@ -30,7 +30,7 @@ module JasperserverRails
         'reports',
         "#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}"
       ].join '/'
-      report_data = RestClient.get(
+      RestClient.get(
         URI.join(
           config[:url],
           report_path
