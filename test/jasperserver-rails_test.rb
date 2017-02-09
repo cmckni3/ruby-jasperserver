@@ -67,7 +67,6 @@ class JasperserverRailsTest < ActiveSupport::TestCase
   end
 
   test 'report data is returned when simply generating the report' do
-    report_file = 'test/dummy/tmp/reports/test3.pdf'
     VCR.use_cassette 'test3' do
       report = JasperserverRails::Jasperserver.new.generate_report do
         format 'pdf'
