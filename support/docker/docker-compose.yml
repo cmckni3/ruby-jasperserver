@@ -1,0 +1,25 @@
+version: '3.1'
+
+networks:
+  rails-jasperserver-network:
+
+services:
+  jasperserver:
+    build: .
+    environment:
+      - DB_TYPE=postgresql
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=admin
+      - DB_PASSWORD=admin
+    ports:
+      - 8080:8080
+    networks:
+      - rails-jasperserver-network
+  db:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    networks:
+      - rails-jasperserver-network
