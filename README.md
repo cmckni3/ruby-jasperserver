@@ -45,7 +45,7 @@ Or install it yourself as:
 
 1. Add jasperserver configuration to config/jasperserver.yml
 
-````
+```yaml
 development:
   url: 'http://server:port/jasperserver/'
   username: 'username'
@@ -60,17 +60,29 @@ production:
   url: 'http://server:port/jasperserver/'
   username: 'username'
   password: 'password'
-````
+```
 
-2. Run a report using the DSL
+2. Run a report
 
-````ruby
-JasperserverRails::Jasperserver.new.run_report 'test.pdf' do
+```ruby
+pdf = JasperserverRails::Jasperserver.new.generate_report do
+        format 'pdf'
+        report '/reports/TestReport'
+        params(Value1: 'Value1')
+      end
+send_data pdf, filename: 'Test.pdf', type: :pdf
+```
+
+3. Download a report using the DSL
+
+```ruby
+file_path = Rails.root.join('tmp', 'reports', 'test.pdf')
+JasperserverRails::Jasperserver.new.run_report file_path do
   format 'pdf'
-  report 'test_report'
-  params({ :Value1 => 'Value1' })
+  report '/reports/TestReport'
+  params(Value1: 'Value1')
 end
-````
+```
 
 ## TODO
 
