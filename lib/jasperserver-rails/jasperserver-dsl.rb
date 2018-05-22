@@ -25,10 +25,11 @@ module JasperserverRails
       instance_eval(&block) if block_given?
       login
       # Run report
+      params = URI.encode_www_form(self.get_params) if self.get_params.present?
       report_path = [
         'rest_v2',
         'reports',
-        "#{self.get_report}.#{self.get_format}?#{URI.encode_www_form(self.get_params)}"
+        "#{self.get_report}.#{self.get_format}?#{params}"
       ].join '/'
       RestClient.get(
         URI.join(
