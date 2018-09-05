@@ -3,7 +3,6 @@
 [![Travis](https://img.shields.io/travis/cmckni3/rails-jasperserver.svg)](https://travis-ci.org/cmckni3/rails-jasperserver)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://codeclimate.com/github/cmckni3/jasperserver-rails)
 [![License](https://img.shields.io/github/license/cmckni3/rails-jasperserver.svg)]()
-[![Dependency Status](https://img.shields.io/versioneye/d/ruby/jasperserver-rails.svg)](https://www.versioneye.com/user/projects/57028f6bfcd19a004543f84b)
 
 Download reports in various formats from jasperserver
 
