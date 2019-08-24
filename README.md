@@ -2,7 +2,8 @@
 [![Gem Version](https://img.shields.io/gem/v/jasperserver-rails.svg)](https://rubygems.org/gems/jasperserver-rails)
 [![Travis](https://img.shields.io/travis/cmckni3/rails-jasperserver.svg)](https://travis-ci.org/cmckni3/rails-jasperserver)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://codeclimate.com/github/cmckni3/jasperserver-rails)
-[![License](https://img.shields.io/github/license/cmckni3/rails-jasperserver.svg)]()
+[![License](https://img.shields.io/github/license/cmckni3/rails-jasperserver.svg)][![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcmckni3%2Fruby-jasperserver.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcmckni3%2Fruby-jasperserver?ref=badge_shield)
+()
 
 Download reports in various formats from jasperserver
 
@@ -94,6 +95,9 @@ end
 JasperserverRails &copy; 2013 by [Chris McKnight](http://github.com/cmckni3).
 
 JasperserverRails is licensed under the MIT license. Please see the MIT-LICENSE document for more information.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcmckni3%2Fruby-jasperserver.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcmckni3%2Fruby-jasperserver?ref=badge_large)
 
 ## Contributing
 
