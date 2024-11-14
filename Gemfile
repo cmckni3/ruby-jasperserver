@@ -17,7 +17,7 @@ gem 'protected_attributes'
 # end
 
 group :test do
-  gem 'sqlite3', '~> 1.0'
+  gem 'sqlite3', '~> 1.3.9'
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.4'
 end
