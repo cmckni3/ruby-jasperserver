@@ -12,9 +12,10 @@ gem 'jquery-rails'
 
 gem 'protected_attributes'
 
-# group :development, :test do
-#   gem 'thin'
-# end
+group :development, :test do
+  gem 'bigdecimal', '1.4.0' # Rails 4
+  # gem 'thin'
+end
 
 group :test do
   gem 'sqlite3', '~> 1.3.9'
