@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'protected_attributes'
 
 group :development, :test do
-  gem 'bigdecimal', '1.4.0' # Rails 4
+  gem 'bigdecimal', '1.3.5' # Rails 4
   # gem 'thin'
 end
 
