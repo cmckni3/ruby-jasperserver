@@ -1,4 +1,5 @@
 # JasperserverRails
+
 [![Gem Version](https://img.shields.io/gem/v/jasperserver-rails.svg)](https://rubygems.org/gems/jasperserver-rails)
 [![CI](https://img.shields.io/github/actions/workflow/status/cmckni3/ruby-jasperserver/ci.yml)](https://github.com/cmckni3/ruby-jasperserver/actions/workflows/ci.yml)
 [![Code Climate](https://api.codeclimate.com/v1/badges/9dfe8fd29537fc32faeb/maintainability)](https://codeclimate.com/github/cmckni3/ruby-jasperserver/maintainability)
