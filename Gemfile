@@ -12,12 +12,12 @@ gem 'jquery-rails'
 
 gem 'protected_attributes'
 
-group :development, :test do
-  gem 'thin'
-end
+# group :development, :test do
+#   gem 'thin'
+# end
 
 group :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.0'
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.4'
 end
