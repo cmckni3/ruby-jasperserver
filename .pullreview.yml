@@ -1,4 +1,0 @@
----
-rules:
-  ignore:
-    - extra_blank_line_detected
