@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bundler', '>= 1.8.4'
 
+gem 'bigdecimal', '1.3.5' # Rails 4
+
 # Declare your gem's dependencies in jasperserver-rails.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
@@ -13,7 +15,6 @@ gem 'jquery-rails'
 gem 'protected_attributes'
 
 group :development, :test do
-  gem 'bigdecimal', '1.3.5' # Rails 4
   # gem 'thin'
 end
 
